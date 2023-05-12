@@ -33,8 +33,8 @@ for (dir_path, dir_names, file_names) in os.walk(current_working_dir):
     # print(f"当前遍历到的目录: {dir_path}")
     os.chdir(dir_path)
     files = dir_path.split("/")
-    new_file_name = files[len(files) - 1] + '.md'
-    
+    new_file_name = f'{files[len(files) - 1]}.md'
+
     print(f"当前所在的文件夹: {os.getcwd()}")
     for file_name in file_names:
         if(file_name.endswith('.go') and not file_name.endswith('_test.go')):

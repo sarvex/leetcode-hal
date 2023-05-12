@@ -24,6 +24,6 @@ word_count = 0
 for file_name in dir_names:
     with open(file_name, "r") as myfile:
         codeContent = myfile.read()
-        print("当前读取文件: {}, 字数统计: {}".format(file_name, str_count2(codeContent)))
+        print(f"当前读取文件: {file_name}, 字数统计: {str_count2(codeContent)}")
         word_count += str_count2(codeContent)
 print(word_count)
